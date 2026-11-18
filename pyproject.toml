@@ -1,0 +1,22 @@
+[project]
+name = "wxauto-group-reader"
+version = "0.1.0"
+description = "用 wxauto4 读取本机已登录微信里指定群的消息，并保存到本地 SQLite"
+readme = "README.md"
+requires-python = ">=3.9,<3.14"
+dependencies = [
+  "pyyaml>=6.0",
+  "comtypes>=1.4.17",
+  "wxauto4>=41.1.7",
+  "wxauto @ git+https://github.com/cluic/wxauto.git",
+]
+
+[project.scripts]
+wxgroup = "wxgroup.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["wxgroup*"]

@@ -1,0 +1,26 @@
+# 复制为 config.yaml 后填写要读取的群。
+# 群名使用微信左侧会话列表里显示的名字（有备注时填备注）。
+# 标题末尾的（17）是群人数，不要写进名字。程序搜索时也会自动去掉。
+
+groups:
+  - name: "示例项目群"
+    exact: true
+
+# 轮询间隔。免费版 wxauto4 没有独立窗口监听，程序会按这个间隔切换到群里读取。
+# 过小会频繁打断你正在看的聊天窗口。
+poll_interval_seconds: 5
+
+# 每隔多少轮，无视“是否有新消息”再读一遍已配置的群，避免漏掉免打扰会话。
+force_scan_rounds: 12
+
+# 只在会话列表显示有新消息时才打开该群。第一轮和强制扫描轮仍会读取。
+only_new_sessions: true
+
+# 打开下一个群之前的停顿，给微信界面留出渲染时间。
+switch_pause_seconds: 0.6
+
+# 时间分隔条只用来给后面的消息标注时间，默认不入库。
+store_time_messages: false
+
+database: data/messages.db
+log_dir: logs

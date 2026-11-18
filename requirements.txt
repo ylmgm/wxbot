@@ -1,0 +1,4 @@
+pyyaml>=6.0
+comtypes>=1.4.17
+wxauto4>=41.1.7
+wxauto @ git+https://github.com/cluic/wxauto.git
